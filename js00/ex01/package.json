@@ -1,0 +1,10 @@
+'{"string":""}'
+
+"Hello `문자열`!"
+빈 문자열 "Who are you?"
+null"I am null and void"
+숫자"My age is `숫자`"
+숫자가 음수나 0"I am Benjamin Button!"
+NaN"Age is just a number"
+undefined"Nobody can define me!"
+
