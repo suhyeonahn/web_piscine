@@ -1,10 +1,16 @@
-'{"string":""}'
-
-"Hello `문자열`!"
-빈 문자열 "Who are you?"
-null"I am null and void"
-숫자"My age is `숫자`"
-숫자가 음수나 0"I am Benjamin Button!"
-NaN"Age is just a number"
-undefined"Nobody can define me!"
-
+{
+    "type": "module",
+    "name": "ex01",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "A program which takes a parameter and print a message accordingly",
+    "keywords": ["hello", "print", "log", "message"],
+    "main": "helloSomeone.js_picine",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/suhyeonahn/js_"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
