@@ -1,1 +1,1 @@
-# js_picine
+# web_picine
