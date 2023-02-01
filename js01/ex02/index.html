@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discount calculator</title>
+	<script src="calc.js" defer></script>
+</head>
+<body>
+	<h1>Discount calculator</h1>
+    <form id="inputForm">
+        <label for="product">Product name:</label>
+        <input type="text" id="product"><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price"><br>
+        <label for="member">Do you have a membership?</label>
+        <input type="checkbox" id="member"><br>
+        <label for="grade">Membership grade:</label>
+        <select id="grade" disabled>
+            <option data-percent="0%">--Choose--</option>
+            <option data-percent="5%">Lv1</option>
+            <option data-percent="10%">Lv2</option>
+            <option data-percent="15%">Lv3</option>
+        </select>
+    </form>
+    <hr>
+    <time datetime=""></time>
+    <ul>
+        <li id="productLi">Product name:</li>
+        <li id="regularPriceLi">Regular price:</li>
+        <li id="discountPriceLi">Discount price:</li>
+    </ul>
+</body>
+</html>
