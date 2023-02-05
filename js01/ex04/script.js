@@ -2,8 +2,6 @@ let prevScrollY = window.scrollY;
 let prevScrollVal = "";
 
 window.addEventListener("scroll", (event) => {
-    //const rect = window.getBoundingClientRect();
-    //console.log(rect);
     if ((prevScrollY > window.scrollY) && ((prevScrollVal != "up") || (prevScrollVal == ""))) {
         alert("You are scrolling up!");
         prevScrollVal = "up";
