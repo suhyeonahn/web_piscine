@@ -11,6 +11,6 @@ Array.from(lis).forEach(item => {
         event.target.style.color = "black";
     })
     item.addEventListener("click", (event) => {
-        alert(`You've select ${event.target.innerHTML}.`);
+        alert(`You've selected ${event.target.innerHTML}.`);
     })
 })
