@@ -2,7 +2,7 @@ const level = ["boilng pasta..", "blanching brocolis..", "preparing garlics and 
 const interval = [10000, 1000, 2000, 2000, 3000, 3000];
 let count = 0;
 
-function bake(i) {
+function cook(i) {
     let promise = new Promise((resolve, reject) => {
         if (Math.random() >= 0.2) {
             setTimeout(() => {
@@ -22,10 +22,10 @@ function bake(i) {
             bake(5);
     }).catch((message) => { 
         console.error(message);
-        bake(i);
+        cook(i);
     });
 }
 
 for (let i = 0; i < 5; i++) {
-        bake(i);
+        cook(i);
 }

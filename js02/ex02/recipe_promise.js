@@ -16,7 +16,7 @@ function bake(count) {
         }
     });
     promise.then((message) => {
-        console.log(level[count] + "\nSUCCESS!");
+        console.log(message);
         bake(count + 1);
     }).catch((message) => { 
         console.error(message);
