@@ -2,13 +2,13 @@ import fetch from 'node-fetch';
 
 const MAX = 100;
 const MIN = 1;
-const n = [];
+const N = [];
 
 for (let i = 0; i < 5; i++)
-    n.push(Math.floor(Math.random() * (MAX - MIN + 1) + MIN));
+    N.push(Math.floor(Math.random() * (MAX - MIN + 1) + MIN));
 
 function fetchPost(count) {
-    return fetch(`https://jsonplaceholder.typicode.com/posts/${n[count]}`, {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${N[count]}`, {
             method: 'GET',
         })
         .then(resonse => resonse.json())
@@ -16,7 +16,7 @@ function fetchPost(count) {
 }
 
 function fetchComments(count) {
-    return fetch(`https://jsonplaceholder.typicode.com/posts/${n[count]}/comments`, {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${N[count]}/comments`, {
         method: 'GET',
     })
     .then(resonse => resonse.json())
@@ -36,7 +36,7 @@ function commentsLog(content) {
 }
 
 async function asyncCall() {
-    for (let i = 0; i < n.length; i++) {
+    for (let i = 0; i < N.length; i++) {
         let post = await fetchPost(i);
         postLog(post, i + 1);
         let comments = await fetchComments(i);
