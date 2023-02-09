@@ -11,7 +11,7 @@ function fetchPost(count) {
     return fetch(`https://jsonplaceholder.typicode.com/posts/${N[count]}`, {
             method: 'GET',
         })
-        .then(resonse => resonse.json())
+        .then(response => response.json())
         .catch(e => console.error(e));
 }
 
@@ -19,7 +19,7 @@ function fetchComments(count) {
     return fetch(`https://jsonplaceholder.typicode.com/posts/${N[count]}/comments`, {
         method: 'GET',
     })
-    .then(resonse => resonse.json())
+    .then(response => response.json())
     .catch(e => console.error(e));
 }
 
