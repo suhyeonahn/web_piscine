@@ -1,11 +1,19 @@
 import './Item.css'
 
-function TodoItem({todo, onRemove}) {
-  const {id, text} = todo;
+function TodoItem({todo, onRemove, onToggle}) {
+  const {id, text, checked} = todo;
+
 
   return (
     <form>
-      <li>{text}</li>
+      <button className='check' onClick={() => onToggle(id)}>✔</button>
+      <li
+        style={{
+          textDecoration: checked ? "line-through" : null,
+          color: checked ? "#ccc" : "#000",
+        }}>
+        {text}
+        </li>
       <button className='delete' onClick={() => onRemove(id)}>❌</button>
       <p />
     </form>
