@@ -1,0 +1,26 @@
+li {
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding-left: 15px;
+    background: rgb(40, 65, 83);
+    color: white;
+    list-style-type: none;
+    width: 380px;
+    word-break:break-all;
+    display: inline-block;
+}
+
+li:hover {
+    background: rgb(80, 128, 162);
+}
+
+.delete {
+    position: relative;
+    bottom: 3.1px;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 100;
+    border: none;
+    background-color: rgb(95, 110, 128);
+}

@@ -1,0 +1,19 @@
+input {
+    font-size: 1rem;
+    font-weight: 100;
+    width: 400px;
+    height: 2rem;
+    padding-left: 15px;
+    word-break:break-all;
+    border: none;
+    background-color: rgb(143, 151, 161);
+    outline: none;
+}
+
+.add {
+    font-size: 1rem;
+    font-weight: 100;
+    border: none;
+    background-color: rgb(95, 110, 128);
+    height: 2.1rem;
+}
