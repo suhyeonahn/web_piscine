@@ -1,10 +1,13 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, isValidElement} from 'react';
 import './TodoListTemplate.css';
 import TodoInput from './Input';
 import TodoItemList from './ItemList';
 
 function TodoListTemplate() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(() => {
+        const saved = JSON.parse(localStorage.getItem('todos'));
+        return (saved || []);
+    });
 
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
@@ -33,7 +36,7 @@ function TodoListTemplate() {
                     todo.checked = !todo.checked;
                 return todo;
              })
-           );
+        );
     }
 
      return (
