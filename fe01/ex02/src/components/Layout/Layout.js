@@ -1,17 +1,17 @@
-import Header from './Header'
+import Container from './Container'
+import Header from './Header';
+import Navigation from './Navigation';
 import Footer from './Footer'
-import Menu from './Menu'
 
 const Layout = (props) => {
     return (
-        <div>
+        <Container>
             <Header />
-            <Menu />
+            <Navigation />
             <main>
                 {props.children}
             </main>
-            <Footer />
-        </div>
+        </Container>
     );
 }
 

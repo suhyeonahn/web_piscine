@@ -3,9 +3,10 @@ import Body from './Body'
 
 function Home() {
     return (
-        <Layout>
-            <Body />
-        </Layout>
+        <>
+        <Layout><Body /></Layout>
+        
+        </>
     );
 }
 
