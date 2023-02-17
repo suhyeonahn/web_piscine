@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import MenuLink from './MenuLink';
 
 const MenuBar = styled.div`

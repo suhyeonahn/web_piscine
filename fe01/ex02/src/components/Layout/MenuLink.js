@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Link = styled.div`
+import styled, { css } from 'styled-components';
+const Link = styled.a`
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
