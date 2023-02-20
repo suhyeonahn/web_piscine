@@ -25,9 +25,9 @@ const NavItem = styled.a`
 const Menu = () => {
     return (
       <Nav>
-        <NavItem href="#">Home</NavItem>
-        <NavItem href="#">About</NavItem>
-        <NavItem href="#">Contact</NavItem>
+        <NavItem href="/">Home</NavItem>
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/contact">Contact</NavItem>
       </Nav>
     );
 };
