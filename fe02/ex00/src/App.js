@@ -1,42 +1,50 @@
 import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
-const axios = require('axios');
+function App() {
+  const [users, setUsers] = useState([]);
 
-const getUsers = async () => {
+  useEffect(() => {
+    (async () => {
+      try {
+        const result = await fetchUsers();
+        setUsers(result);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  },[]);
+
+ const fetchUsers = async () => {
   const response = await axios({
-    method: 'get',
-    url: 'https://api.notion.com/v1/users',
-    headers: {
+    method: 'get'
+    url: '/v1/users',
+    headers: 
       'Notion-Version': '2022-02-16',
       'Authorization': `Bearer ${process.env.API_KEY}`
     }
   });
   return response.data.results;
-}
+ }
 
-const users = await getUsers();
-
-const userInfos = users.map(user => ({
-  name: user.name,
-  email: user.person.email,
-  type: user.type,
-  profileImageUrl: user.person.avatar_url
-}));
-
-function App() {
+  const userInfos = users.map((user) => ({
+    name: user.name,
+    email: user.person.email,
+    type: user.type,
+    profileImageUrl: user.person.avatar_url
+  }));
+  
   return (
-    <ul>
-    ${userInfos.map(userInfo => `
-      <li>
-        <img src="${userInfo.profileImageUrl}" alt="${userInfo.name} profile image">
-        <div>
-          <p>Name: ${userInfo.name}</p>
-          <p>Email: ${userInfo.email}</p>
-          <p>Type: ${userInfo.type}</p>
-        </div>
-      </li>
-    `).join('')}
-  </ul>
+    <div>
+      {userInfos.map((userInfo) =>(
+        <div key={userInfo.id}>
+          <img src={userInfo.profileImageUrl} alt={userInfo.name} />
+          <p>Name: {userInfo.name}</p>
+          <p>Email: {userInfo.email}</p>
+          <p>Type: {userInfo.type}</p>
+          </div>
+      ))}
+    </div>
   );
 }
 
