@@ -19,7 +19,7 @@ function App() {
   const response = await axios({
     method: 'get',
     url: '/v1/users',
-    headers: 
+    headers: {
       'Notion-Version': '2022-02-16',
       'Authorization': `Bearer ${process.env.API_KEY}`
     }
