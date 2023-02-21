@@ -17,7 +17,7 @@ function App() {
 
  const fetchUsers = async () => {
   const response = await axios({
-    method: 'get'
+    method: 'get',
     url: '/v1/users',
     headers: 
       'Notion-Version': '2022-02-16',
