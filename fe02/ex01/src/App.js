@@ -27,10 +27,6 @@ function App() {
   return response.data.results;
 }
 
- const fetchUsers = async () => {
-  const response = await axios.get('/api/users');
-  return response.data.results;
-}
 return (
     <div>
         <div key={page.id}>
