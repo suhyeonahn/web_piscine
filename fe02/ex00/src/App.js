@@ -16,27 +16,13 @@ function App() {
   },[]);
 
  const fetchUsers = async () => {
-  const response = await axios({
-    method: 'get',
-    url: '/v1/users',
-    headers: {
-      'Notion-Version': '2022-02-16',
-      'Authorization': `Bearer ${process.env.API_KEY}`
-    }
-  });
+  const response = await axios.get('/api/users');
   return response.data.results;
- }
+}
 
-  const userInfos = users.map((user) => ({
-    name: user.name,
-    email: user.person.email,
-    type: user.type,
-    profileImageUrl: user.person.avatar_url
-  }));
-  
-  return (
+return (
     <div>
-      {userInfos.map((userInfo) =>(
+      {users.map((userInfo) =>(
         <div key={userInfo.id}>
           <img src={userInfo.profileImageUrl} alt={userInfo.name} />
           <p>Name: {userInfo.name}</p>
