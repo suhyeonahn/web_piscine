@@ -5,6 +5,7 @@ const router = express.Router()
 
 const data = require('../seoul_metro_station.json')
 
+
 router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
@@ -32,12 +33,11 @@ router.get('/line', (req, res) => {
 router.post('/station/id', (req, res) => {
   const frCode = req.body.fr_code;
 
-  console.log(frCode)
   if (!frCode)
     return res.status(400).json({ error: 'fr_code is required' });
 
   const result = data.DATA.filter(item => item.fr_code === frCode);
-  res.send(`The value of fr_code is ${frCode}`);
+  res.status(200).json(result);
 });
 
 module.exports = router;
